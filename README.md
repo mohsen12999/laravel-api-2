@@ -10,7 +10,8 @@
 - make models:
   - customers: `php artisan make:model Customer --all`.
   - invoice: `php artisan make:model Customer --all`.
-- run migration with seeding: `php artisan migrate:fresh --seed`
+- run migration with seeding: `php artisan migrate:fresh --seed`.
+- make resources and collection: `php artisan make:resource V1\CustomerResource`, `php artisan make:resource V1\CustomerCollection`
 
 ## Reference
 
