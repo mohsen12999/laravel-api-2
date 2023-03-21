@@ -16,14 +16,14 @@ class ApiFilter
     {
         $eloQuery = [];
 
-        foreach ($this->safeParams as $parm => $operators) {
-            $query = $request->query($parm);
+        foreach ($this->safeParams as $param => $operators) {
+            $query = $request->query($param);
 
             if (!isset($query)) {
                 continue;
             }
 
-            $column = $this->columnMap[$parm] ?? $parm;
+            $column = $this->columnMap[$param] ?? $param;
 
             foreach ($operators as $operator) {
                 if (isset($query[$operator])) {
