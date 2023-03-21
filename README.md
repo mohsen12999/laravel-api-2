@@ -6,7 +6,10 @@
 - install composer.
 - install laravel => `composer global require laravel/installer`.
 - make laravel projects => `laravel new laravel-api`.
-
+- make database in PHPMyAdmin.
+- make models:
+  - customers: `php artisan make:model Customer --all`.
+  - invoice: `php artisan make:model Customer --all`.
 
 ## Reference
 
