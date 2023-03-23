@@ -33,3 +33,18 @@ GET http://localhost:8000/api/v1/invoices?amount[gte]=10000
 Accept: application/json
 
 ###
+
+# add customer
+POST http://localhost:8000/api/v1/customers
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Mohsen",
+  "type": "I",
+  "email": "mohsen@mail.biz",
+  "address": "208 Hansen Flats Apt. 16",
+  "city": "New Peter",
+  "state": "Idaho",
+  "postalCode": "12345"
+}
