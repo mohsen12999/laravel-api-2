@@ -48,3 +48,34 @@ Content-Type: application/json
   "state": "Idaho",
   "postalCode": "12345"
 }
+
+###
+
+# Change customer
+PUT http://localhost:8000/api/v1/customers/231
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Mohsen Shabanian",
+    "type": "B",
+    "email": "mohsen@mail.biz",
+    "address": "4321 Hansen Flats Apt. 16",
+    "city": "New Peter",
+    "state": "Idaho",
+    "postalCode": "12345"
+}
+
+###
+
+# Change customer
+PATCH http://localhost:8000/api/v1/customers/231
+Accept: application/json
+Content-Type: application/json
+
+{
+    "type": "I",
+    "state": "Texas",
+}
+
+###
