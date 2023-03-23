@@ -1,0 +1,35 @@
+# load all customers
+GET http://localhost:8000/api/v1/customers
+Accept: application/json
+
+###
+
+# load all customers with filter
+GET http://localhost:8000/api/v1/customers?state[eq]=Idaho
+Accept: application/json
+
+###
+
+# load all customers with their invoices
+GET http://localhost:8000/api/v1/customers?includeInvoices=true
+Accept: application/json
+
+###
+
+# load all invoices
+GET http://localhost:8000/api/v1/invoices
+Accept: application/json
+
+###
+
+# load all invoices with filter
+GET http://localhost:8000/api/v1/invoices?amount[gte]=10000
+Accept: application/json
+
+###
+
+# load all invoices with filter
+GET http://localhost:8000/api/v1/invoices?amount[gte]=10000
+Accept: application/json
+
+###
