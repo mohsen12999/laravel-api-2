@@ -29,7 +29,25 @@ Accept: application/json
 ###
 
 # load all invoices with filter
+GET http://localhost:8000/api/v1/invoices?customerId[eq]=1
+Accept: application/json
+
+###
+
+# load all invoices with filter
 GET http://localhost:8000/api/v1/invoices?amount[gte]=10000
+Accept: application/json
+
+###
+
+# load one customers
+GET http://localhost:8000/api/v1/customers/1
+Accept: application/json
+
+###
+
+# load one customers whit invoices
+GET http://localhost:8000/api/v1/customers/1?includeInvoices=true
 Accept: application/json
 
 ###
@@ -75,7 +93,29 @@ Content-Type: application/json
 
 {
     "type": "I",
-    "state": "Texas",
+    "state": "Texas"
 }
 
 ###
+
+# store bulk invoice
+POST http://localhost:8000/api/v1/invoices/bulk
+Accept: application/json
+Content-Type: application/json
+
+[
+    {
+        "customerId": 1,
+        "amount": "1001.00",
+        "status": "B",
+        "billedDate": "2019-07-14 14:41:32",
+        "paidDate": null
+    },
+    {
+        "customerId": 1,
+        "amount": "1002.00",
+        "status": "P",
+        "billedDate": "2019-08-27 04:47:58",
+        "paidDate": "2023-03-02 11:31:01"
+    }
+]
